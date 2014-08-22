@@ -29,6 +29,16 @@
       return $(settings.container).html(templateHtml);
     };
 
+    Controller.hideForms = function() {
+      $('[data-id=template-form]').hide();
+      return $('.widget-close').hide();
+    };
+
+    Controller.showForms = function() {
+      $('[data-id=template-form]').show();
+      return $('.widget-close').show();
+    };
+
     return Controller;
 
   })();
@@ -58,7 +68,7 @@
     function Templates() {}
 
     Templates.renderForm = function() {
-      return _.template("<div class=\"widget\" data-id=\"template-widget-wrapper\">\n  <div class=\"widget-header\">\n    <h2 class=\"widget-title\">Weather</h2>\n    <span class='widget-close' data-id='template-close'>×</span>\n    <div class=\"widget-form\" data-id=\"template-form\">\n      <input name=\"weather-search\" type=\"text\" autofocus=\"true\">\n      <button id=\"weather\" data-id=\"template-button\">Get current weather</button><br>\n    </div>\n  </div>\n  <div class=\"widget-body\" data-id=\"template-output\"></div>\n</div>");
+      return _.template("<div class=\"widget\" data-id=\"template-widget-wrapper\">\n  <div class=\"widget-header\">\n    <h2 class=\"widget-title\">Weather</h2>\n    <span class='widget-close' data-id='template-close'>×</span>\n    <div class=\"widget-form\" data-id=\"template-form\">\n      <input name=\"weather-search\" type=\"text\" autofocus=\"true\">\n      <button data-id=\"template-button\">Get current weather</button><br>\n    </div>\n  </div>\n  <div class=\"widget-body\" data-id=\"template-output\"></div>\n</div>");
     };
 
     return Templates;

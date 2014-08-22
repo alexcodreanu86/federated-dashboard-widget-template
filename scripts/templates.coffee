@@ -9,7 +9,7 @@ class WidgetTemplate.Templates
                       <span class='widget-close' data-id='template-close'>×</span>
                       <div class="widget-form" data-id="template-form">
                         <input name="weather-search" type="text" autofocus="true">
-                        <button id="weather" data-id="template-button">Get current weather</button><br>
+                        <button data-id="template-button">Get current weather</button><br>
                       </div>
                     </div>
                     <div class="widget-body" data-id="template-output"></div>
