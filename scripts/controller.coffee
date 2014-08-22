@@ -5,10 +5,10 @@ class WidgetTemplate.Controller
     templateHtml = WidgetTemplate.Templates.renderForm()
     $(settings.container).html(templateHtml)
 
-  @hideForms: ->
+  @exitEditMode: ->
     $('[data-id=template-form]').hide()
     $('.widget-close').hide()
 
-  @showForms: ->
+  @enterEditMode: ->
     $('[data-id=template-form]').show()
     $('.widget-close').show()

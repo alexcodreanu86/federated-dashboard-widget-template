@@ -29,12 +29,12 @@
       return $(settings.container).html(templateHtml);
     };
 
-    Controller.hideForms = function() {
+    Controller.exitEditMode = function() {
       $('[data-id=template-form]').hide();
       return $('.widget-close').hide();
     };
 
-    Controller.showForms = function() {
+    Controller.enterEditMode = function() {
       $('[data-id=template-form]').show();
       return $('.widget-close').show();
     };
